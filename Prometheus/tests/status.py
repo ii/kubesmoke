@@ -6,7 +6,7 @@ timeout = 5
 while True:
 
   try:
-    r = requests.get("http://172.0.0.1:8000", timeout=timeout)
+    r = requests.get("http://127.0.0.1:8000", timeout=timeout)
     print(r.ok)
     print(r.content)
   except requests.exceptions.Timeout:
