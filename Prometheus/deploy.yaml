@@ -16,4 +16,8 @@ spec:
 
    - name: status
      image: zilman/kubesmoke-prom
-     command: ["python", "/tests/status.py"]
+     command: ["python", "/tests/simple_status.py"]
+
+   - name: complex_query
+     image: zilman/kubesmoke-prom
+     command: ["python", "/tests/complex_query.py"]
