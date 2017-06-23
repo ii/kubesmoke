@@ -8,7 +8,7 @@ host, port = os.environ.get('PROMETHEUS_SERVICE_HOST'), os.environ.get('PROMETHE
 timeout = 5
 while True:
   try:
-    r = requests.get("http://{}:8000".format(PROMETHEUS_SERVICE_HOST, PROMETHEUS_SERVICE_PORT), timeout=timeout)
+    r = requests.get("http://{}:{}".format(host, port), timeout=timeout)
     print(r.ok)
     print(r.content)
   except requests.exceptions.Timeout:
